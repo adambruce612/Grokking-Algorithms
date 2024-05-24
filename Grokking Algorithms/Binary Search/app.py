@@ -5,15 +5,15 @@ def binary_search(arr, item):
 
     # While you haven't narrowed it down to one element...
     while low <= high:
-        mid = (low + high) / 2 #check the middle element
+        mid = (low + high) // 2 #check the middle element
         guess = arr[mid]
         # found the item
-    if guess == item:
-        return mid
-    elif guess > item:
-        high = mid - 1
-    else:
-        low = mid + 1
+        if guess == item:
+            return mid
+        elif guess > item:
+            high = mid - 1
+        else:
+            low = mid + 1
     return None
 
 my_list = [1, 3, 5, 7, 9]
